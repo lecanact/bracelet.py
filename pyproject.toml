@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bracelet.py"
+version = "1.0.0"
+authors = [
+  { name="LeAndre C.", email="leandre@lecanact.me" },
+]
+description = "A Python Wrapper For The Bracelet API"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "python-dotenv>=1.2.4",
+]
+keywords = [
+    "lanyard.py",
+    "lanyard",
+    "bracelet",
+    "yapper",
+    "yapin"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "GPL-3.0-only"
+license-files = ["LICEN[CS]E*"]
+
+[project.optional-dependencies]
+test = [
+    "coverage>=7.0"
+]
+
+[project.urls]
+Repository = "https://github.com/lecanact/bracelet.py"
+Issues = "https://github.com/lecanact/bracelet.py/issues"
+Documentation = "https://bracelet.oriaxen.com/sdk/python"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.coverage.run]
+branch = true
+source = ["src/bracelet"]
+
+[tool.coverage.xml]
+output = "coverage.xml"
